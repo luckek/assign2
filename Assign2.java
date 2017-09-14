@@ -70,10 +70,9 @@ static class Action2 implements ActionListener {
       JLabel jobLabel = new JLabel("Job Description: Running, Jumping, Professional Sports");
       JLabel picLabel = new JLabel(icon);
       
+      //Set up Layouts
       panel.setLayout(new BorderLayout());
       subPanel.setLayout(new GridLayout(3, 1));
-      
-      
       
       //Setting Component Position
       label.setHorizontalAlignment(SwingConstants.CENTER);
@@ -83,8 +82,6 @@ static class Action2 implements ActionListener {
       eduLabel.setVerticalAlignment(SwingConstants.CENTER);
       jobLabel.setHorizontalAlignment(SwingConstants.LEFT);
       jobLabel.setVerticalAlignment(SwingConstants.BOTTOM);
-      //picLabel.setHorizontalTextPosition(SwingConstants.CENTER);
-      //picLabel.setVerticalTextPosition(SwingConstants.BOTTOM);
       
       
       //Add Components
@@ -111,22 +108,3 @@ static class Action2 implements ActionListener {
     }
 }
 
-      JLabel label = new JLabel("Jared info.");
-      JPanel panel = new JPanel();
-      frame4.add(panel);
-      panel.add(label);
-    }
-  }
-    static class Action4 implements ActionListener {
-      public void actionPerformed (ActionEvent e) {
-        JFrame frame5 = new JFrame("Keysha");
-        frame5.setVisible(true);
-        frame5.setSize(500,500);
-
-        JLabel label = new JLabel("Keysha info.");
-        JPanel panel = new JPanel();
-        frame5.add(panel);
-        panel.add(label);
-      }
-    }
-}
