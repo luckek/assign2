@@ -56,7 +56,60 @@ static class Action2 implements ActionListener {
     public void actionPerformed (ActionEvent e) {
       JFrame frame4 = new JFrame("Jared");
       frame4.setVisible(true);
-      frame4.setSize(500,500);
+      frame4.setSize(600, 600);
+      
+      //Components
+      JPanel panel = new JPanel();
+      JPanel subPanel = new JPanel();
+      
+      ImageIcon icon = new ImageIcon("./src/Mario.JPEG");
+      
+      JLabel label = new JLabel("Jared's page.");
+      JLabel nameLabel = new JLabel("Name: Mario");
+      JLabel eduLabel = new JLabel("Education: None");
+      JLabel jobLabel = new JLabel("Job Description: Running, Jumping, Professional Sports");
+      JLabel picLabel = new JLabel(icon);
+      
+      panel.setLayout(new BorderLayout());
+      subPanel.setLayout(new GridLayout(3, 1));
+      
+      
+      
+      //Setting Component Position
+      label.setHorizontalAlignment(SwingConstants.CENTER);
+      nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
+      nameLabel.setVerticalAlignment(SwingConstants.TOP);
+      eduLabel.setHorizontalAlignment(SwingConstants.LEFT);
+      eduLabel.setVerticalAlignment(SwingConstants.CENTER);
+      jobLabel.setHorizontalAlignment(SwingConstants.LEFT);
+      jobLabel.setVerticalAlignment(SwingConstants.BOTTOM);
+      //picLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+      //picLabel.setVerticalTextPosition(SwingConstants.BOTTOM);
+      
+      
+      //Add Components
+      frame4.add(panel);
+      panel.add(label, BorderLayout.NORTH);
+      panel.add(subPanel, BorderLayout.CENTER);
+      subPanel.add(nameLabel);
+      subPanel.add(eduLabel);
+      subPanel.add(jobLabel);
+      panel.add(picLabel, BorderLayout.EAST);
+    }
+  }
+    static class Action4 implements ActionListener {
+      public void actionPerformed (ActionEvent e) {
+        JFrame frame5 = new JFrame("Keysha");
+        frame5.setVisible(true);
+        frame5.setSize(500,500);
+
+        JLabel label = new JLabel("Keysha info.");
+        JPanel panel = new JPanel();
+        frame5.add(panel);
+        panel.add(label);
+      }
+    }
+}
 
       JLabel label = new JLabel("Jared info.");
       JPanel panel = new JPanel();
