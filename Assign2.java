@@ -12,7 +12,7 @@ public static void main (String[] args){
 
   JPanel panel = new JPanel();
   frame.add(panel);
-  
+
   JButton button = new JButton("Kyle");
   panel.add(button);
   button.addActionListener (new Action1());
@@ -31,13 +31,25 @@ public static void main (String[] args){
 }
 static class Action1 implements ActionListener {
   public void actionPerformed (ActionEvent e) {
+
     JFrame frame2 = new JFrame("Kyle Lucke");
     frame2.setVisible(true);
     frame2.setSize(500,500);
-    JLabel label = new JLabel("Kyle's profile info, w00t.");
+    ImageIcon icon = new ImageIcon("kll.png");
+
+    JLabel label = new JLabel("Name: Kyle Lucke");
+    JLabel imageLabel = new JLabel(icon);
+    JLabel eduLabel = new JLabel("Education: College Senior");
+    JLabel jobLabel = new JLabel("Job Description: Research assistant \\ OPENSIMPPLLE admin");
+
     JPanel panel = new JPanel();
+    panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+
     frame2.add(panel);
     panel.add(label);
+    panel.add(imageLabel);
+    panel.add(eduLabel);
+    panel.add(jobLabel);
   }
 }
 static class Action2 implements ActionListener {
@@ -57,23 +69,23 @@ static class Action2 implements ActionListener {
       JFrame frame4 = new JFrame("Jared");
       frame4.setVisible(true);
       frame4.setSize(600, 600);
-      
+
       //Components
       JPanel panel = new JPanel();
       JPanel subPanel = new JPanel();
-      
+
       ImageIcon icon = new ImageIcon("./src/Mario.JPEG");
-      
+
       JLabel label = new JLabel("Jared's page.");
       JLabel nameLabel = new JLabel("Name: Mario");
       JLabel eduLabel = new JLabel("Education: None");
       JLabel jobLabel = new JLabel("Job Description: Running, Jumping, Professional Sports");
       JLabel picLabel = new JLabel(icon);
-      
+
       //Set up Layouts
       panel.setLayout(new BorderLayout());
       subPanel.setLayout(new GridLayout(3, 1));
-      
+
       //Setting Component Position
       label.setHorizontalAlignment(SwingConstants.CENTER);
       nameLabel.setHorizontalAlignment(SwingConstants.LEFT);
@@ -82,8 +94,8 @@ static class Action2 implements ActionListener {
       eduLabel.setVerticalAlignment(SwingConstants.CENTER);
       jobLabel.setHorizontalAlignment(SwingConstants.LEFT);
       jobLabel.setVerticalAlignment(SwingConstants.BOTTOM);
-      
-      
+
+
       //Add Components
       frame4.add(panel);
       panel.add(label, BorderLayout.NORTH);
@@ -107,4 +119,3 @@ static class Action2 implements ActionListener {
       }
     }
 }
-
