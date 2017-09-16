@@ -54,14 +54,21 @@ static class Action1 implements ActionListener {
 }
 static class Action2 implements ActionListener {
   public void actionPerformed (ActionEvent e) {
-    JFrame frame3 = new JFrame("AJ \"Ants In My Eyes Johnson\" Brown");
+    JFrame frame3 = new JFrame("AJ \"Ants-In-My-Eyes-Johnson\" Brown");
     frame3.setVisible(true);
     frame3.setSize(500,500);
-
-    JLabel label = new JLabel("AJ will put bio info here.");
+    ImageIcon icon = new ImageIcon("aj.jpg");
+    JLabel imageLabel = new JLabel(icon);
+    JLabel label = new JLabel("I can't see anything, there are ants in my eyes folks, so come on down!");
+    JLabel eduLabel = new JLabel("Education: Last semester of college.");
+    JLabel jobLabel = new JLabel("Job Description: Hacking, selling microwaves at prices that aren't too low, I hope.");
+    JLabel picLabel = new JLabel(icon);
     JPanel panel = new JPanel();
     frame3.add(panel);
+    panel.add(eduLabel);
+    panel.add(jobLabel);
     panel.add(label);
+    panel.add(imageLabel);
   }
 }
   static class Action3 implements ActionListener {
