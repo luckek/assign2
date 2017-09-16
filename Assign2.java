@@ -111,11 +111,21 @@ static class Action2 implements ActionListener {
         JFrame frame5 = new JFrame("Keysha");
         frame5.setVisible(true);
         frame5.setSize(500,500);
+        ImageIcon pic = new ImageIcon("pika.png");
 
-        JLabel label = new JLabel("Keysha info.");
+        JLabel label = new JLabel("Name: Keysha Zak");
+        JLabel imgLabel = new JLabel (pic);
+        JLabel eduLabel = new JLabel ("Education: College Junior");
+        JLabel jobLabel = new JLabel("Job Information: Full-time student");
+
         JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+
         frame5.add(panel);
         panel.add(label);
+        panel.add(imgLabel);
+        panel.add(eduLabel);
+        panel.add(jobLabel);
       }
     }
 }
