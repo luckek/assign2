@@ -81,7 +81,7 @@ static class Action2 implements ActionListener {
       JPanel panel = new JPanel();
       JPanel subPanel = new JPanel();
 
-      ImageIcon icon = new ImageIcon("./src/Mario.JPEG");
+      ImageIcon icon = new ImageIcon("Mario.JPEG");
 
       JLabel label = new JLabel("Jared's page.");
       JLabel nameLabel = new JLabel("Name: Mario");
